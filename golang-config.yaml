@@ -11,10 +11,10 @@ metadataTest:
 
 fileExistenceTests:
   # Main binary exists
-  - name: go
-    path: /usr/local/go/bin/go
+  - name: mytestfile.txt
+    path: /gaurav/pandey
     shouldExist: true
-    permissions: "-rwxr-xr-x"
+    permissions: "-rw-r--r--"
 
 commandTests:
   # Main binary can print its version
