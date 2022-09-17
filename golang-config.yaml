@@ -23,7 +23,7 @@ commandTests:
     args: ["version"]
     # the image version number is 1.19.1. The following will fail
     # expectedOutput: ["go version go1.14.6"]
-    expectedOutput: ["go version go1.19.6"]
+    expectedOutput: ["go version go1.19.1"]
 
     exitCode: 0
   # Can compile a valid "hello world"
