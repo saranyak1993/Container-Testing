@@ -18,7 +18,7 @@ fileExistenceTests:
 
 commandTests:
   # Main binary can print its version
-  - name: go version
+  - name: Test the correct version number of go
     command: go
     args: ["version"]
     # the image version number is 1.19.1. The following will fail
@@ -28,7 +28,7 @@ commandTests:
     exitCode: 0
     
   # Can compile a valid "hello world"
-  - name: hello world
+  - name: Test if hello world is displayed
     setup: [["wget", "https://raw.githubusercontent.com/go-training/helloworld/master/main.go"]]
     command: go
     args: ["run", "main.go"]
