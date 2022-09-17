@@ -12,7 +12,10 @@ metadataTest:
 fileExistenceTests:
   # Main binary exists
   - name: Check existance of go file in the path
+    # The following will pass
     path: /usr/local/go/bin/go
+    # The following will fail
+    # path: /usr/local/go/bin/go123
     shouldExist: true
     permissions: "-rwxr-xr-x"
 
