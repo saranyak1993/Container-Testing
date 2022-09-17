@@ -32,6 +32,9 @@ commandTests:
     setup: [["wget", "https://raw.githubusercontent.com/go-training/helloworld/master/main.go"]]
     command: go
     args: ["run", "main.go"]
+    # The following fail
     expectedOutput: ["Helloo World!!"]
+    # The following will pass
+    # expectedOutput: ["Hello World!!"]
     exitCode: 0
     teardown: [["rm", "main.go"]]
