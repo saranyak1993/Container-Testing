@@ -33,8 +33,8 @@ commandTests:
     command: go
     args: ["run", "main.go"]
     # The following fail
-    expectedOutput: ["Helloo World!!"]
+    # expectedOutput: ["Helloo World!!"]
     # The following will pass
-    # expectedOutput: ["Hello World!!"]
+    expectedOutput: ["Hello World!!"]
     exitCode: 0
     teardown: [["rm", "main.go"]]
