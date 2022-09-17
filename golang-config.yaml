@@ -6,9 +6,9 @@ metadataTest:
     - key: GOPATH
       value: /go
   # the following will pass    
-  # exposedPorts: []
+  exposedPorts: []
   # the following will fail    
-  exposedPorts: [80]
+  # exposedPorts: [80]
   volumes: []
   entrypoint: []
 
@@ -16,9 +16,9 @@ fileExistenceTests:
   # Main binary exists
   - name: Check existance of go file in the path
     # The following will pass
-    # path: /usr/local/go/bin/go
+    path: /usr/local/go/bin/go
     # The following will fail
-    path: /usr/local/go/bin/go123
+    # path: /usr/local/go/bin/go123
     shouldExist: true
     permissions: "-rwxr-xr-x"
 
@@ -28,9 +28,9 @@ commandTests:
     command: go
     args: ["version"]
     # the image version number is 1.19.1. The following will fail
-    expectedOutput: ["go version go1.14.6"]
+    # expectedOutput: ["go version go1.14.6"]
     # The following will pass
-    # expectedOutput: ["go version go1.19.1"]
+    expectedOutput: ["go version go1.19.1"]
     # Since a new container is created, we have to exit from the container. We are using exit code to exit
     exitCode: 0
     
@@ -40,8 +40,8 @@ commandTests:
     command: go
     args: ["run", "main.go"]
     # The following fail
-    expectedOutput: ["Helloo World!!"]
+    # expectedOutput: ["Helloo World!!"]
     # The following will pass
-    # expectedOutput: ["Hello World!!"]
+    expectedOutput: ["Hello World!!"]
     exitCode: 0
     teardown: [["rm", "main.go"]]
