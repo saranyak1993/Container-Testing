@@ -5,7 +5,10 @@ metadataTest:
   env:
     - key: GOPATH
       value: /go
-  exposedPorts: []
+  # the following will pass    
+  # exposedPorts: []
+  # the following will fail    
+  exposedPorts: [80]
   volumes: []
   entrypoint: []
 
