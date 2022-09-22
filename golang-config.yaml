@@ -28,9 +28,9 @@ commandTests:
     command: go
     args: ["version"]
     # the image version number is 1.19.1. The following will fail
-    # expectedOutput: ["go version go1.14.6"]
+    expectedOutput: ["go version go1.14.6"]
     # The following will pass
-    expectedOutput: ["go version go1.19.1"]
+    # expectedOutput: ["go version go1.19.1"]
     # Since a new container is created, we have to exit from the container. We are using exit code to exit
     exitCode: 0
     
