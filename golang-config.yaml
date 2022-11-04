@@ -6,9 +6,9 @@ metadataTest:
     - key: GOPATH
       value: /go
   # the following will pass    
-  # exposedPorts: []
+  exposedPorts: []
   # the following will fail    
-  exposedPorts: [80]
+  #exposedPorts: [80]
   volumes: []
   entrypoint: []
 
